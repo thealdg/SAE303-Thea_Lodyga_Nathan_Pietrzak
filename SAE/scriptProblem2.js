@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function createBarCharts(data) {
             const solverContainer = document.getElementById('barChartsContainer');
-            solverContainer.innerHTML = ''; // Clear previous content
+            solverContainer.innerHTML = ''; 
 
             const names = Array.from(new Set(data.map(item => item.name)));
 
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function updateSolverSelector(data) {
             const solverSelector = document.getElementById('solverSelector');
-            solverSelector.innerHTML = ''; // Clear previous content
+            solverSelector.innerHTML = '';
 
             const solverNames = Array.from(new Set(data.map(item => item.name)));
 
