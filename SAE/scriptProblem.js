@@ -27,14 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const datasets = [];
-        const fullnames = []; // To store unique fullnames
+        const fullnames = [];
 
         data.forEach(item => {
             const fullname = item.fullname;
             const time = parseFloat(item.time);
             const nbVariables = item.nb_variables;
 
-            // Check if fullname is not already added to the array
             if (!fullnames.includes(fullname)) {
                 fullnames.push(fullname);
 
@@ -49,24 +48,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 datasets.push(dataset);
             }
 
-            // Find the dataset corresponding to the fullname
             const dataset = datasets.find(ds => ds.label === fullname);
 
-            // Add data point to the dataset
             dataset.data.push({
-                x: fullname, // Use fullname as x-axis label
+                x: fullname, 
                 y: nbVariables,
             });
         });
 
-        // Filter datasets to remove those without data
         const filteredDatasets = datasets.filter(dataset => dataset.data.length > 0);
 
         const ctx = container.getContext('2d');
         const chart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: fullnames, // Set fullnames as x-axis labels
+                labels: fullnames, 
                 datasets: filteredDatasets,
             },
             options: {
