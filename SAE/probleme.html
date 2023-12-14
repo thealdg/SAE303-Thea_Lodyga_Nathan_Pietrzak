@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="charts">
+
+    <div class="container">
+        <a class="fleche" href="problemes.html"><i class='bx bx-left-arrow-alt'></i></a>
+        <h2>Problèmes de la famille </h2>
+        <canvas id="myChart" width="800" height="400"></canvas>
+    </div>
+
+    <div class="container">
+        <h2>Performances des différents résolveurs pour chaque problème :</h2>
+    
+
+        <label for="solverSelector">Sélectionnez un résolveur :</label><br>
+        <select id="solverSelector">
+            <!-- Options seront ajoutées dynamiquement -->
+        </select>
+        <div id="solverContainer">
+            <div id="barChartsContainer"></div>
+        </div>
+    </div>    
+
+</div>
+
+<script src="scriptProblem.js"></script>
+<script src="scriptProblem2.js"></script>
+
+</body>
+
+</html>
